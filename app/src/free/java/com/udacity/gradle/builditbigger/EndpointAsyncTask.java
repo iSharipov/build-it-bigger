@@ -39,7 +39,9 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        progressBar.setVisibility(View.VISIBLE);
+        if (progressBar != null){
+            progressBar.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
